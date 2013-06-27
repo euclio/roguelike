@@ -1,5 +1,9 @@
 #!/bin/bash
 
+cd system
+make
+cd -
+
 ./main.py 2>.game_err
 reset
 

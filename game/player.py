@@ -1,6 +1,6 @@
 from entity import *
 
-class PlayerEntity(EntityType):
+class PlayerEntity(Entity):
   def print_something(self, s):
     print "This is player printing what you asked for: %s!" % (s)
 
@@ -24,4 +24,5 @@ class PlayerEntity(EntityType):
     return True
 
   def __init__(self, location):
-    self.kind = player
+    self.location = location
+    self.kind = 'player'
