@@ -1,12 +1,10 @@
 #!/usr/bin/python
 from system.rgame import *
 from map import *
-from input import handle_input, PlayerAction
 from gameplay import handle_gameplay, game_state
 
 def input_handler(ch):
-  action = handle_input(ch)
-  handle_gameplay(action)
+  handle_gameplay(ch)
 
 # Hand over control to C++ right away.
 # world: A world object, containing all data structures

@@ -1,14 +1,27 @@
 from entity import *
 
-class PlayerActions:
+class PlayerEntity(EntityType):
   def print_something(self, s):
     print "This is player printing what you asked for: %s!" % (s)
 
-class PlayerEntityType(EntityType):
-  def __init__(self, type_name = None, entity_classes = None):
-    EntityType.__init__(self, type_name, entity_classes)
-    self.actions = PlayerActions()
+  def move_up(self):
+    y, x = self.location
+    self.location = y - 1, x
 
-PLAYER_ENTITY_TYPE = PlayerEntityType("player")
-PlayerEntity = Entity(PLAYER_ENTITY_TYPE)
-PlayerEntity.actions.print_something("Hello!")
+  def move_left(self):
+    y, x = self.location
+    self.location = y, x - 1
+
+  def move_right(self):
+    y, x = self.location
+    self.location = y, x + 1
+
+  def move_down(self):
+    y, x = self.location
+    self.location = y + 1, x
+
+  def is_on_map(self):
+    return True
+
+  def __init__(self, location):
+    self.kind = player
