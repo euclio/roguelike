@@ -10,5 +10,5 @@ class PlayerEntityType(EntityType):
     self.actions = PlayerActions()
 
 PLAYER_ENTITY_TYPE = PlayerEntityType("player")
-PlayerEntity = Entity(PLAYER_ENTITY_TYPE)
-PlayerEntity.actions.print_something("Hello!")
+player = Entity(PLAYER_ENTITY_TYPE)
+player.actions.print_something("Hello!")
