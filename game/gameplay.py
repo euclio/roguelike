@@ -1,21 +1,21 @@
-def handle_gameplay():
+def handle_gameplay(world, action):
   if action == PlayerAction.MOVE_UP:
-      pass
+    pass
   elif action == PlayerAction.MOVE_UP:
-      pass
+    pass
   elif action == PlayerAction.MOVE_LEFT:
-      pass
+    pass
   elif action == PlayerAction.MOVE_DOWN:
-      pass
+    pass
   elif action == PlayerAction.MOVE_RIGHT:
-      pass
+    pass
   elif action == PlayerAction.INTERACT:
-      pass
+    pass
   elif action == PlayerAction.ABILITY:
-      pass
+    pass
   elif action == PlayerAction.INVENTORY:
-      pass
+    pass
   elif action == PlayerAction.NO_ACTION:
-      pass
+    pass
   else:
-      raise ValueError('Invalid player aciton encountered')
+    raise ValueError('Invalid player aciton encountered')

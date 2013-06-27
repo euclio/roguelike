@@ -2,5 +2,8 @@
 
 ./main.py 2>.game_err
 reset
-cat .game_err
-rm .game_err
+
+if [ -f ".game_err" ]; then
+  cat .game_err
+  rm .game_err
+fi

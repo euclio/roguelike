@@ -14,7 +14,7 @@ world = World()
 
 def input_handler(ch):
   action = handle_input(ch)
-  handle_gameplay(action)
+  handle_gameplay(world, action)
 
 # Hand over control to C++ right away.
 # world: A world object, containing all data structures
