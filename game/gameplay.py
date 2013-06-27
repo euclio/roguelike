@@ -1,3 +1,7 @@
+from map import make_empty_grid, Map
+
+game_state = GameState()
+
 def handle_gameplay():
   if action == PlayerAction.MOVE_UP:
       pass
@@ -18,4 +22,13 @@ def handle_gameplay():
   elif action == PlayerAction.NO_ACTION:
       pass
   else:
-      raise ValueError('Invalid player aciton encountered')
+      raise ValueError('Invalid player action encountered')
+
+class GameState(object):
+  class Player:
+    def __init__(self):
+      self.location = (10, 10)
+
+  def __init__(self):
+    self.tile_map = Map(make_empty_grid(25, 25))
+    self.player = Player()
