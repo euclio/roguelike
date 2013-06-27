@@ -1,0 +1,9 @@
+#!/bin/bash
+
+./main.py 2>.game_err
+reset
+
+if [ -f ".game_err" ]; then
+  cat .game_err
+  rm .game_err
+fi
