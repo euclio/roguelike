@@ -1,4 +1,4 @@
-from Tile import *
+from tile import *
 
 DEFAULT_GRID_SIZE = {'x': 256, 'y': 256}
 

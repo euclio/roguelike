@@ -1,9 +1,11 @@
 #!/usr/bin/python
 from system.rgame import *
+from map import *
 
 class World:
   def __init__(self):
     self.message = "default message"
+    self.map = Map()
 
 world = World()
 
