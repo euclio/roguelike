@@ -1,0 +1,5 @@
+Packages you need:
+
+On Linux:
+apt-get install libboost-python1.48
+apt-get install libsdl1.2-dev libsdl1.2debian
