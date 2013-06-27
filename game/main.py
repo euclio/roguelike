@@ -5,7 +5,8 @@ from map import *
 class World:
   def __init__(self):
     self.message = "default message"
-    self.map = Map()
+    self.map = Map(make_empty_grid(10, 10))
+    self.pointer = (1, 1)
 
 world = World()
 
