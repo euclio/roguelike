@@ -7,11 +7,11 @@ char GetTileChar(object tile) {
   return '.';
 }
 
-void Render(object world) {
+void Render(object gamestate) {
   erase();
 
   // render map
-  object map = world.attr("map");
+  object map = gamestate.attr("tile_map");
   int width = extract<int>(map.attr("get_grid_size")()[0]);
   int height = extract<int>(map.attr("get_grid_size")()[1]);
   for (int y=0; y<height; y++) {
@@ -22,9 +22,9 @@ void Render(object world) {
   }
 
   // render pointer
-  object pointer = world.attr("pointer");
-  mvaddch(extract<int>(pointer[0]),
-          extract<int>(pointer[1]), '@');
+  object player = gamestate.attr("player");
+  mvaddch(extract<int>(player.attr("location")[0]),
+          extract<int>(player.attr("location")[1]), '@');
 }
 
 void GameInit(object world, object inputHandler) {
