@@ -1,6 +1,6 @@
 from tile import *
 
-DEFAULT_GRID_SIZE = {'x': 256, 'y': 256}
+DEFAULT_GRID_SIZE = 256, 256
 
 def make_empty_grid(y, x):
   grid = []
@@ -8,12 +8,11 @@ def make_empty_grid(y, x):
     grid.append([Tile(BLANK_TILE_TYPE)] * x)
   return grid
 
-
 class Map:
-  def __init__(self, grid = None):
+  def __init__(self, grid=None):
     if grid is None:
-      self.grid = make_empty_grid(DEFAULT_GRID_SIZE['y'],
-                                       DEFAULT_GRID_SIZE['x'])
+      x, y = DEFAULT_GRID_SIZE
+      self.grid = make_empty_grid(x, y)
     else:
       self.grid = grid
 
