@@ -1,9 +1,9 @@
 class TileType:
-  def __init__(self):
-    self.type_name = "invalid"
-
-  def __init__(self, type_name):
-    self.type_name = type_name.lower()
+  def __init__(self, type_name = None):
+    if type_name is None:
+      self.type_name = "invalid"
+    else:
+      self.type_name = type_name.lower()
 
 FLOOR_TILE_TYPE = TileType("floor")
 DOOR_TILE_TYPE = TileType("door")
