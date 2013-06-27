@@ -1,4 +1,5 @@
 from map import make_empty_grid, Map
+from player import PlayerEntity
 
 class Actions:
   UP_ACTION = 1
@@ -48,11 +49,11 @@ def _do_inventory_action(key):
 def _do_map_action(action):
   if action == Actions.UP_ACTION:
     game_state.player.move_up()
-  elif action == Actions.actions.LEFT_ACTION:
+  elif action == Actions.LEFT_ACTION:
     game_state.player.move_left()
   elif action == Actions.DOWN_ACTION:
     game_state.player.move_down()
-  elif action == actions.RIGHT_ACTION:
+  elif action == Actions.RIGHT_ACTION:
     game_state.player.move_right()
   elif action == Actions.INTERACT:
     game_state.player.interact()
